@@ -90,7 +90,7 @@ h2 {
 }
 
 .images-container img {
-  height: -webkit-fill-available;
+  height: -moz-available, -webkit-fill-available;
 }
 
 .text-container {
