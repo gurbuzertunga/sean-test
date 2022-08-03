@@ -12,22 +12,48 @@
 
 body {
   background-color: #E5E5E5;
-  margin: 0 auto;
-  padding: 80px 160px;
 }
 
 section {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(435px, 470px)); 
+  margin: 0 auto;
+  width: fit-content;
+  gap: 2vw;
+
   justify-content: space-between;
   margin-bottom: 30px;
 }
 
+@media (max-width: 1366px) {
+  section {
+    grid-template-columns: repeat(2, minmax(435px, 470px));
+  }
+}
+
+@media (max-width: 900px) {
+  section {
+    grid-template-columns: repeat(1, minmax(435px, 470px));
+    gap: 2.5vh;
+  }
+}
+
+@media (max-width: 450px) {
+  section {
+    grid-template-columns: 95%;
+    place-content: center;
+    gap: 2vh;
+  }
+
+  .text-container {
+    padding: 0 !important;
+    margin: 0;
+  }
+}
+
 article {
-  width: 32%;
+  width: 100%;
   border-radius: 8px;
-  margin-bottom: 40px;
   display: flex;
 }
 
@@ -116,90 +142,4 @@ button {
   font-size: 17px;
   line-height: 60px;
   text-align: center;
-}
-
-@media screen and (max-width: 720px) {
-  body {
-    background-color: #E5E5E5;
-    width: 100%;
-    padding: 20px;
-  }
-
-  section {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-
-  article {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 40px;
-    line-height: 30px;
-    font-size:7vw;
-  }
-
-  h2 {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  .text-container {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .text-container ul li{
-    line-height: 20px;
-  }
-
-  .text-container ul li span{
-    font-size: 12px;
-  }
-
-  .text-container p {
-    font-size: 12px;
-    line-height: 20px;
-  }
-  
-  button {
-    width: 200px;
-    font-size: 14px;
-  }
-}
-/* media query for max width 1366px and min width 720px */
-@media screen and (max-width: 1366px) and (min-width: 720px) {
-  body {
-    max-width: 1366px;
-    padding: 20px 40px;
-  }
-
-  article {
-    width: 45%;
-
-  }
-
-  .text-container {
-    padding: 0px 20px;
-  }
-
-  .text-container h2 {
-    padding-top: 20px;
-    line-height: 25px;
-  }
-  
-  .text-container p {
-    font-size: 14px;
-    line-height: 15px;
-  }
-
-  .text-container ul li {
-   line-height: 15px;
-  }
-
 }
