@@ -12,6 +12,7 @@
 
 body {
   background-color: #E5E5E5;
+  padding-bottom: 5vh;
 }
 
 section {
@@ -86,11 +87,10 @@ h2 {
 .images-container {
   display: flex;
   flex-direction: column;
-  padding-bottom: 3px;
 }
 
 .images-container img {
-  height: auto;
+  height: -webkit-fill-available;
 }
 
 .text-container {
@@ -142,4 +142,5 @@ button {
   font-size: 17px;
   line-height: 60px;
   text-align: center;
+
 }
